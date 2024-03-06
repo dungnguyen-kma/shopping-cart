@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" id="ordered-page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/ordered.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NIKE</title>
+</head>
+
+<body>
+    <div class="app" id="app">
+        <div class="header" id="header">
+            <div class="header__nav">
+                <a href="./index.html" class="nav__logo">
+                    <img src="./assets/img/logo.png" class="logo--icon"></img>
+                    <h1 class="logo--text">Nike</h1>
+                </a>
+                <div class="nav__links">
+                    <a href="./index.html" class="links--item item--home">HOME</a>
+                    <a href="#" class="links--item item--about">ABOUT</a>
+                    <a href="ordered-page.html" class="links--item item--bills">BILLS</a>
+                    <a href="./cart-page.html" class="links--item item__cart">
+                        <i class="fa-solid fa-cart-shopping cart--icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main" id="main">
+            <div class="content">
+                <div class="list__title">
+                    <h3 class="title--code">Code</h3>
+                    <h3 class="title--customer-name">Customer Name</h3>
+                    <h3 class="title--date">Date</h3>
+                    <h3 class="title--products">Products</h3>
+                    <h3 class="title--total-price">Total Price</h3>
+                    <h3 class="title--refund">Refund</h3>
+                </div>
+                <div class="cart__empty">
+                    <img src="./assets/img/empty-cart.png" alt="Empty cart" class="empty--img">
+                </div>
+                <div class="ordered__list">
+                    <!-- render ordered list here -->
+                </div>
+            </div>
+        </div>
+        <div class="ordered-details__modal">
+            <div class="modal__main">
+                <h1 class="modal--header">Thông tin đơn hàng</h1>
+                <div class="modal__body">
+                    <div class="modal__label">
+                        <p class="label--code item">Mã đơn hàng: </p>
+                        <p class="label--phone item">Số điện thoại: </p>
+                        <p class="label--email item">Email: </p>
+                        <p class="label--address item">Địa chỉ: </p>
+                        <p class="label--message item">Ghi chú: </p>
+                        <p class="label--product-list item">Danh sách sản phẩm: </p>
+                    </div>
+                    <div class="modal__details">
+                        <!-- render detail here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" id="cartpage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <link rel="stylesheet" href="./assets/css/bill.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NIKE</title>
+</head>
+
+<body>
+    <div class="app" id="app">
+        <div class="header" id="header">
+            <div class="header__nav">
+                <a href="./index.html" class="nav__logo">
+                    <img src="./assets/img/logo.png" class="logo--icon"></img>
+                    <h1 class="logo--text">Nike</h1>
+                </a>
+                <div class="nav__links">
+                    <a href="./index.html" class="links--item item--home">HOME</a>
+                    <a href="#" class="links--item item--about">ABOUT</a>
+                    <a href="./ordered-page.html" class="links--item item--bills">BILLS</a>
+                    <a href="./cart-page.html" class="links--item item__cart">
+                        <i class="fa-solid fa-cart-shopping cart--icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main" id="main">
+            <div class="content">
+                <div class="list__title">
+                    <h3 class="title--product">Product name</h3>
+                    <h3 class="m-l-r-64 title--quantity">Quantity</h3>
+                    <h3 class="m-l-r-64 title--subtotal">Subtotal</h3>
+                    <h3 class="m-l-r-64 title--total">Total</h3>
+                    <h3 class="title--clear">Clear Cart</h3>
+                </div>
+                <ul class="cart__list">
+                </ul>
+                <div class="total-price"></div>
+                <div class="cart__empty">
+                    <img src="./assets/img/empty-cart.png" alt="Empty cart" class="empty--img">
+                </div>
+            </div>
+            <div class="footer">
+                <a href="./index.html" class="home--btn btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Shopping
+                </a>
+                <button class="buy--btn btn">Buy</button>
+            </div>
+        </div>
+        <div class="buy-modal" id="bill">
+            <div class="modal__main">
+                <h3 class="modal--header">Thông tin người mua</h3>
+                <div class="modal__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <form action="./cart-page.html" class="modal__form">
+                    <div class="form__name form-control">
+                        <label class="form--label label--name">Họ và tên<sup>*</sup></label>
+                        <div class="firstname wrapper">
+                            <input type="text" class="input--field input-firstname" placeholder="Họ">
+                            <span class="warn-firstname warn--popup"></span>
+                        </div>
+                        <div class="lastname wrapper">
+                            <input type="text" class="input--field input-lastname" placeholder="Tên">
+                            <span class="warn-lastname warn--popup"></span>
+                        </div>
+                    </div>
+                    <div class="form__email form-control">
+                        <label class="form--label label--email">Email<sup>*</sup></label>
+                        <input type="email" class="input--field email" placeholder="Email">
+                        <span class="warn-email warn--popup"></span>
+
+                    </div>
+                    <div class="form__phone form-control">
+                        <label class="form--label label--phone">Số điện thoại<sup>*</sup></label>
+                        <input type="number" class="input--field phonenumber" placeholder="Số điện thoại">
+                        <span class="warn-phone warn--popup"></span>
+                    </div>
+                    <div class="form__localtion form-control">
+                        <label for="" class="form--label label--location">Địa chỉ<sup>*</sup></label>
+                        <div class="form__select">
+                            <select class="select__address province" name="province" title="Tỉnh/thành phố nơi bạn đang sinh sống">                             
+                                <!-- render option here -->
+                            </select>
+                            <select class="select__address district" name="district" title="Quận/huyện nơi bạn đang sinh sống">
+                                <option selected value="0" class="select--district">--Chọn Quận/Huyện--</option>
+                            </select>
+                            <select class="select__address ward" name="ward" title="Phường/xã nơi bạn đang sinh sống">
+                                <option selected value="0" class="select--ward">--Chọn Phường/Xã--</option>
+                            </select>
+                        </div>
+                        <span class="warn-select warn--popup"></span>
+                        <input type="text" class="input--field address-number" placeholder="Số nhà">
+                        <span class="warn-address-number warn--popup"></span>
+                    </div>
+                    <div class="form__message form-control">
+                        <label class="form--label label--message">Lời nhắn</label>
+                        <textarea class="input--field input-message" rows="10" title="Nhập gì đó!"></textarea>
+                    </div>
+                </form>
+                <div class="form__btn form-control">
+                    <button type="reset" class="submit--btn ignore">Hủy</button>
+                    <button type="submit" class="submit--btn submit">Xác nhận</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>

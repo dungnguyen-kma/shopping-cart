@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    --circle: 40px
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.header__nav {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    line-height: 70px;
+}
+
+.nav__logo {
+    display: flex;
+}
+
+.logo--icon {
+    width: 95px;
+}
+
+.logo--text {
+    font-size: 20px;
+}
+
+.links--item {
+    font-size: 20px;
+    margin: 0 16px;
+}
+
+.item--bills {
+    position: relative;
+}
+
+.item--bills::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid #f0819f;
+    bottom: -4px;
+    left: 0
+}
+
+.links--item:hover {
+    cursor: pointer;
+    color: rgb(247, 103, 8);
+}
+
+.cart--icon {
+    position: relative;
+}
+
+.has-pseudo::after {
+    content: attr(data-content);
+    color: white;
+    position: absolute;
+    width: 20px;
+    min-width: fit-content;
+    height: 20px;
+    min-height: fit-content;
+    font-size: 12px;
+    box-shadow: 0 0 5px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    background-color: red;
+    right: -12px;
+    top: -12px;
+}
+
+.main {
+    position: relative;
+    padding-top: 80px;
+    width: 1300px;
+    height: 100vh;
+    max-width: calc(100% - 50px);
+    margin: 0 auto;
+}
+
+
+.list__title {
+    display: none;
+    grid-template-columns: 15% 25% 17% 18% 20% 20%;
+    grid-template-rows: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+.ordered__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ordered__item {
+    display: grid;
+    grid-template-columns: 15% 24% 21% 17.4% 18.5% 20%;
+    grid-template-rows: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.ordered__detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ordered--code, .expand__details{
+    padding: 2px 0;
+}
+
+.expand__details{
+    display: flex;
+    color: #2477af;
+}
+.expand__details:hover{
+    cursor: pointer;
+}
+.details--text{
+    padding-right: 4px;
+}
+
+.ordered__refund {
+    margin: auto 16px;
+}
+
+.refund--btn{
+    color: red;
+}
+.refund--btn:hover{
+    cursor: pointer;
+}
+
+.ordered-details__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    display: none;
+    animation: modalFadeIn ease 0.2s;;
+}
+
+.cart__empty{
+    text-align: center;
+    display: none;
+}
+
+.modal__main{
+    position: relative;
+    width: 1200px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 16px auto;
+    padding: 16px 16px;
+}
+
+.modal__body{
+    display: flex;
+}
+
+.modal__label{
+    flex: 1;
+}
+.item{
+    margin: 24px 0;
+    padding: 16px 0;
+}
+
+.modal__details{
+    flex: 3;
+}
+
+.item:not(:last-child){
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+}
+
+.detail__product-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.product-list__item{
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15%;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.product-detail--item{
+    margin: auto 0;
+}
+
+.product--image{
+    height: 100px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.product--item{
+    padding: 8px 0;
+}
+
+.btn {
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
